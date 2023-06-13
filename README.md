@@ -6,12 +6,13 @@ You can read the details about the methods, implementation, and results from: (t
 
 **Please cite ourwork as follows:**
 ```
-@article{sime2023comp,
-  title={Deep learning-based automated steel surface defect segmentation: A comparative experimental study},
+@article{sime2023deep,
+  title={Deep learning-based automated steel surface defect segmentation: a comparative experimental study},
   author={Sime, Dejene M and Wang, Guotai and Zeng, Zhi and Peng, Bei},
-  journal={Mutimedia Tools and Applications},
+  journal={Multimedia Tools and Applications},
+  pages={1--24},
   year={2023},
-  publisher={Springer nature}
+  publisher={Springer}
 }
 ```
 ## Python >= 3.6
