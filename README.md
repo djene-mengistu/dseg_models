@@ -3,14 +3,14 @@ The use of machine vision and deep learning for intelligent industrial inspectio
 
 The illustration of the general flow of deep learning-based defect segmentation is presented as follows:
 <p align="center">
-<img src="/figures/general.jpg" width="40%" height="10%">
+<img src="/figures/general.jpg" width="70%" height="30%">
 </p>
 
 **Fig. 1:** Typical representation of deep learning-based defect segmetnation approaches.
 
 The overall framework of the proposed hybrid network of transformer-based encoder and CNN-based decoder is presented as follows:
 <p align="center">
-<img src="/figures/hybrid-model.jpg" width="60%" height="30%">
+<img src="/figures/hybrid-model.jpg" width="70%" height="40%">
 </p>
 
 **Fig. 2:** The framework of the proposed hybrid network. We proposed combining the transformer-based encoder with a CNN-based segmentation head adapted from UperNet. The Pyramid Pooling Module
@@ -44,12 +44,35 @@ Put downloaded data into the following directory structure:
     * SSDD/ ...# raw data of SSDD 
 ## Data loading and preparation 
 
+## Selected results
+Selected results of the proposed method and other methods in the comparative study are presented as follows.\
+The overall framework of the proposed hybrid network of transformer-based encoder and CNN-based decoder is presented as follows:
+
+<p align="center">
+<img src="/figures/results_neu.jpg" width="60%" height="40%">
+</p>
+
+**Fig. 3:** Performance summary of CNN-based methods on the NEU-Seg dataset.
+
+<p align="center">
+<img src="/figures/results_neu_hybrid.jpg" width="60%" height="40%">
+</p>
+
+**Fig. 4:** Performance summary of transformer-based and proposed hybrid methods on the NEU-Seg dataset.
+
+<p align="center">
+<img src="/figures/dice vs fps backbone.jpg" width="70%" height="50%">
+</p>
+
+**Fig. 5:** Mean Dice score vs. FPS for selected models on the NEU-Seg using various backbone architectures.
+
 ## Visualization
 The visualization of the segmetnation results for selected methods is presented as follows.\
+<p align="center">
+<img src="/figures/viz_ssdd.jpg" width="80%" height="30%">
+</p>
 
-
-## Acknowledgment
-
+**Fig. 6:** Visualization of the predicted segmentation maps with selected models on the SSDD dataset.
 
 
 ## Contact
