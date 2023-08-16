@@ -125,7 +125,7 @@ class ConvNeXt(nn.Module):
 
 if __name__ == '__main__':
     model = ConvNeXt('S')
-    # model.load_state_dict(torch.load('C:\\Users\\sithu\\Documents\\weights\\backbones\\convnext\\convnext_tiny_1k_224_ema.pth', map_location='cpu')['model'], strict=False)
+    # model.load_state_dict(torch.load('.../pretrained_weights/cpt/convnext_tiny_1k_224_ema.pth', map_location='cpu')['model'], strict=False)
     x = torch.randn(1, 3, 256, 256)
     feats = model(x)
     for y in feats:
