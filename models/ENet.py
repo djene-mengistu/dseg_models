@@ -216,14 +216,7 @@ class UpsamplingBottleneck(nn.Module):
 
 
 def get_enet(nclass=3, backbone='', pretrained=False, root='~/.torch/models', pretrained_base=True, **kwargs):
-    # acronyms = {
-    #     'pascal_voc': 'pascal_voc',
-    #     'pascal_aug': 'pascal_aug',
-    #     'ade20k': 'ade',
-    #     'coco': 'coco',
-    #     'citys': 'citys',
-    # }
-    # from core.data.dataloader import datasets
+    
     model = ENet(nclass=3, backbone=backbone, pretrained_base=pretrained_base, **kwargs)
     # if pretrained:
     #     from .model_store import get_model_file
@@ -233,12 +226,9 @@ def get_enet(nclass=3, backbone='', pretrained=False, root='~/.torch/models', pr
     return model
 
 
-# def get_enet_citys(**kwargs):
-#     return get_enet('citys', '', **kwargs)
-
 
 if __name__ == '__main__':
-    img = torch.randn(1, 3, 512, 512)
+    img = torch.randn(1, 3,256,256)
     model = get_enet()
     output = model(img)
     print(output.shape)
