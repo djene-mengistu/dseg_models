@@ -5,8 +5,6 @@ import torch.nn.functional as F
 from utilities.base_model import SegBaseModel
 from utilities.utilities import _FCNHead, JPU
 
-# from .segbase import SegBaseModel
-# from .fcn import _FCNHead
 
 __all__ = ['OCNet', 'get_ocnet']
 
@@ -310,21 +308,9 @@ class ASPOCModule(nn.Module):
 
 def get_ocnet(backbone='resnet18', oc_arch='asp', pretrained=False, root='~/.torch/models',
               pretrained_base=True, **kwargs):
-#     acronyms = {
-#         'pascal_voc': 'pascal_voc',
-#         'pascal_aug': 'pascal_aug',
-#         'ade20k': 'ade',
-#         'coco': 'coco',
-#         'citys': 'citys',
-#     }
-#     from ..data.dataloader import datasets
+ 
     model = OCNet(nclass=3, backbone=backbone, oc_arch=oc_arch,
                   pretrained_base=pretrained_base, **kwargs)
-#     if pretrained:
-#         from .model_store import get_model_file
-#         device = torch.device(kwargs['local_rank'])
-#         model.load_state_dict(torch.load(get_model_file('%s_ocnet_%s_%s' % (
-#             oc_arch, backbone, acronyms[dataset]), root=root),
-#             map_location=device))
+ 
     return model
 
