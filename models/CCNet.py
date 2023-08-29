@@ -5,9 +5,6 @@ import torch.nn.functional as F
 from utilities.base_model import SegBaseModel
 from utilities.utilities import _FCNHead, JPU, CrissCrossAttention
 
-# from core.nn import CrissCrossAttention
-# from .segbase import SegBaseModel
-# from .fcn import _FCNHead
 
 __all__ = ['CCNet', 'get_ccnet']
 
@@ -98,20 +95,9 @@ class _RCCAModule(nn.Module):
 
 def get_ccnet(nclass=3, backbone='resnet101', pretrained=False, root='~/.torch/models',
               pretrained_base=True, **kwargs):
-#     acronyms = {
-#         'pascal_voc': 'pascal_voc',
-#         'pascal_aug': 'pascal_aug',
-#         'ade20k': 'ade',
-#         'coco': 'coco',
-#         'citys': 'citys',
-#     }
-#     from ..data.dataloader import datasets
+ 
     model = CCNet(nclass=3, backbone=backbone, pretrained_base=pretrained_base, **kwargs)
-#     if pretrained:
-#         from .model_store import get_model_file
-#         device = torch.device(kwargs['local_rank'])
-#         model.load_state_dict(torch.load(get_model_file('ccnet_%s_%s' % (backbone, acronyms[dataset]), root=root),
-#                               map_location=device))
+ 
     return model
 
 
