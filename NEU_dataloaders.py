@@ -79,7 +79,7 @@ def get_transforms(phase, mean, std):
 
     list_trfms = Compose(list_transforms)
     return list_trfms
-
+# The dataloader can also be done using the images provided for the annotations, here the dataloader is based on the .CSV files converted from the images.
 def dataloaders(
     data_folder,
     df_path,
