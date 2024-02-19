@@ -21,12 +21,14 @@ You can read the details about the methods, implementation, and results from the
 
 **Please cite ourwork as follows:**
 ```
-@article{sime2023deep,
+@article{sime2024deep,
   title={Deep learning-based automated steel surface defect segmentation: a comparative experimental study},
   author={Sime, Dejene M and Wang, Guotai and Zeng, Zhi and Peng, Bei},
   journal={Multimedia Tools and Applications},
-  pages={1--24},
-  year={2023},
+  volume={83},
+  number={1},
+  pages={2995--3018},
+  year={2024},
   publisher={Springer}
 }
 ```
