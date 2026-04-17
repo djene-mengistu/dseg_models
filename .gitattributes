@@ -1,5 +1,5 @@
-# THIS IS gitattributes.
+# Hide Jupyter Notebooks from language statistics
+*.ipynb linguist-vendored
 
-notebooks/** linguist-vendored
-
-*.ipynb -linguist-detectable = False
+# Treat notebooks as binary files (cleaner repo)
+*.ipynb -text -diff -merge
